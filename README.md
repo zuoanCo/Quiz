@@ -29,6 +29,14 @@ npm run dev
 npm run build
 ```
 
+## 生成 Windows 安装包
+
+```bash
+npm run package:win
+```
+
+安装包输出到 `release/刷题助手-Setup-0.1.0-x64.exe`。
+
 ## 启动构建产物
 
 ```bash

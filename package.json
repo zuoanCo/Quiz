@@ -1,6 +1,8 @@
 {
   "name": "study-assistant-electron",
   "version": "0.1.0",
+  "description": "本地题库与远程题库刷题助手",
+  "author": "zuoanCo",
   "private": true,
   "type": "module",
   "main": "dist-electron/main.js",
@@ -46,13 +48,20 @@
     "win": {
       "target": [
         {
-          "target": "portable",
+          "target": "nsis",
           "arch": [
             "x64"
           ]
         }
       ],
-      "artifactName": "${productName}-${version}-${arch}.${ext}"
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "刷题助手"
     }
   }
 }
