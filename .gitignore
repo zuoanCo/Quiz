@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-electron/
+.vite/
+.npm-cache/
+npm-debug.log*
+*.local
+*.pid
