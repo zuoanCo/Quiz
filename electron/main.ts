@@ -5,6 +5,10 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
 
+function resolveAppIcon() {
+  return isDev ? path.join(__dirname, "../build/icon.ico") : path.join(process.resourcesPath, "icon.ico");
+}
+
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1440,
@@ -13,6 +17,7 @@ function createWindow() {
     minHeight: 760,
     title: "刷题助手",
     backgroundColor: "#f5f7fb",
+    icon: resolveAppIcon(),
     show: false,
     titleBarStyle: "hiddenInset",
     webPreferences: {

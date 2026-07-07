@@ -40,6 +40,12 @@
     "directories": {
       "output": "release"
     },
+    "extraResources": [
+      {
+        "from": "build/icon.ico",
+        "to": "icon.ico"
+      }
+    ],
     "files": [
       "dist/**/*",
       "dist-electron/**/*",
@@ -54,13 +60,16 @@
           ]
         }
       ],
-      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}",
+      "icon": "build/icon.ico"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
       "shortcutName": "刷题助手"
     }
   }
